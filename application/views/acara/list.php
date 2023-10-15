@@ -10,58 +10,31 @@
 <div class="container my-5">
     <h3>Highlight Acara</h3>
     <div class="row acara-wrap my-3">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-8">
-
-            <div class=" card-wrap border p-0">
-                <div class="card-img">
-                    <img src="<?php echo base_url('assets/template/images/comingsoon.jpg') ?> " alt="comingsoon">
-                    <div class="date-img text-center">
-                        <h5 class="font-weight-bold">00</h5>
-                        <p>Bulan</p>
+        <?php foreach ($acara as $acara) { ?>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-2">
+            <!-- Adjust padding -->
+            <div class="d-flex flex-column h-100">
+                <div class="card-wrap border p-0 flex-fill">
+                    <!-- Use flex-fill class -->
+                    <div class="card-img">
+                        <img src="<?php echo base_url('assets/template/images/comingsoon.jpg') ?>" alt="comingsoon">
                     </div>
-                </div>
-                <div class="card-desc">
-                    <h5>Judul Acara</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <a href="#" class="btn btn-success">Selengkapnya</a>
+                    <div class="card-desc">
+                        <h5>
+                            <?= $acara->name; ?>
+                        </h5>
+                        <p>
+                            <?= $acara->date; ?>
+                        </p>
+                        <p>
+                            <?php echo strlen($acara->description) > 100 ? substr($acara->description, 0, 100) . '...' : $acara->description; ?>
+                        </p>
+                        <a href="<?php echo base_url('acara/detail/' . $acara->id_acara) ?>"
+                            class="btn btn-success">Selengkapnya</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-8">
-
-            <div class=" card-wrap border p-0">
-                <div class="card-img">
-                    <img src="<?php echo base_url('assets/template/images/comingsoon.jpg') ?> " alt="comingsoon">
-                    <div class="date-img text-center">
-                        <h5 class="font-weight-bold">00</h5>
-                        <p>Bulan</p>
-                    </div>
-                </div>
-                <div class="card-desc">
-                    <h5>Judul Acara</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <a href="#" class="btn btn-success">Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-8">
-
-            <div class=" card-wrap border p-0">
-                <div class="card-img">
-                    <img src="<?php echo base_url('assets/template/images/comingsoon.jpg') ?> " alt="comingsoon">
-                    <div class="date-img text-center">
-                        <h5 class="font-weight-bold">00</h5>
-                        <p>Bulan</p>
-                    </div>
-                </div>
-                <div class="card-desc">
-                    <h5>Judul Acara</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <a href="#" class="btn btn-success">Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-
-
+        <?php } ?>
     </div>
 </div>

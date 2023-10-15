@@ -58,6 +58,9 @@
 	gap: 8px;
 }
 
+.card-desc a {
+}
+
 .wrap-detail {
 	display: flex;
 	flex-direction: column;

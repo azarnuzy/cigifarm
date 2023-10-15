@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jul 2023 pada 08.18
--- Versi server: 10.4.18-MariaDB
--- Versi PHP: 7.4.16
+-- Generation Time: Oct 15, 2023 at 02:11 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,62 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gambar`
+-- Table structure for table `acara`
+--
+
+CREATE TABLE `acara` (
+  `id_acara` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `time` varchar(255) NOT NULL,
+  `register_url` varchar(255) NOT NULL,
+  `thumbnail` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `banner` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `acara`
+--
+
+INSERT INTO `acara` (`id_acara`, `name`, `slug`, `description`, `date`, `time`, `register_url`, `thumbnail`, `banner`, `content`) VALUES
+(3, 'Event 1', 'event-1', 'Deskripsi event 1', '11-10-2022', '09.00 AM', 'https://vscode.dev/liveshare/67D4D49883EF0129F86842195A979709B160', 'comingsoon9.jpg', 'comingsoonbaner.jpg', '<p>Test Content</p>\r\n\r\n<ul>\r\n	<li>a</li>\r\n	<li>b</li>\r\n	<li>c</li>\r\n</ul>\r\n'),
+(4, 'Event 2', 'event-2', 'Deskripsi event 2', '11-10-2022', '09.00 AM', 'http://localhost/cigifarm/admin/acara/tambah', 'comingsoon13.jpg', 'comingsoonbaner1.jpg', '<p>Test Event 2</p>\r\n\r\n<ol>\r\n	<li>a</li>\r\n	<li>b</li>\r\n	<li>c</li>\r\n</ol>\r\n'),
+(6, 'Event 4', 'event-4', 'Deskripsi event 4', '11-10-2022', '09.00 AM', 'https://getbootstrap.com/docs/5.0/utilities/colors/', 'WhatsApp_Image_2023-07-18_at_18_51_43.jpg', 'WhatsApp_Image_2023-06-14_at_07_53_51.jpg', '<p><strong>bold</strong></p>\r\n\r\n<p><em>italic</em></p>\r\n\r\n<p><s>striketrough</s></p>\r\n'),
+(7, 'Seminar Pendidikan Nasional', 'seminar-pendidikan-nasional', 'Aliquam nobis quod est quaerat modi? Incidunt debitis praesentium in corporis necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis ', 'Rabu, 14 Agustus 2023', '14.00 - 16.00 WIB', 'https://youtube.com', 'comingsoon14.jpg', 'mario-rabbids-sparks-of-hope-game-characters-4k-wallpaper-3840x2160-uhdpaper_com-510_1_a.jpg', '<h3><strong>Aliquam nobis quod est quaerat modi? Incidunt debitis praesentium in corporis</strong></h3>\r\n\r\n<p>necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;necessitatibus laboriosam, provident beatae odio sapiente ut ratione. Placeat nihil quaerat rem dolor eum aspernatur natus voluptates quas, perferendis sint repudiandae harum aliquid, repellendus quibusdam excepturi? Rerum, autem veniam assumenda illum nulla tenetur facere amet atque labore blanditiis deleniti facilis&nbsp;</p>\r\n'),
+(8, 'Event 5', 'event-5', 'Deskripsi event 5', '11-10-2022', '09.00 AM', 'https://vscode.dev/liveshare/67D4D49883EF0129F86842195A979709B160', 'Screenshot_(559).png', 'Screenshot_(557).png', '<h1>Heading 1</h1>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `id_event` int(10) UNSIGNED NOT NULL,
+  `cover` varchar(255) NOT NULL,
+  `banner` varchar(255) NOT NULL,
+  `nama_event` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `detail` text NOT NULL,
+  `start_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `end_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` enum('upcoming','ongoing','finished') NOT NULL,
+  `kapasitas` int(11) NOT NULL,
+  `start_reg` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `end_reg` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `tipe` enum('online','offline') NOT NULL,
+  `lokasi` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gambar`
 --
 
 CREATE TABLE `gambar` (
@@ -32,13 +88,13 @@ CREATE TABLE `gambar` (
   `id_produk` int(3) NOT NULL,
   `judul_gambar` varchar(50) DEFAULT NULL,
   `gambar` varchar(50) NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `header_transaksi`
+-- Table structure for table `header_transaksi`
 --
 
 CREATE TABLE `header_transaksi` (
@@ -60,11 +116,11 @@ CREATE TABLE `header_transaksi` (
   `tanggal_bayar` varchar(20) DEFAULT NULL,
   `nama_bank` varchar(50) DEFAULT NULL,
   `tanggal_post` datetime NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `header_transaksi`
+-- Dumping data for table `header_transaksi`
 --
 
 INSERT INTO `header_transaksi` (`id_header_transaksi`, `id_pelanggan`, `nama_pelanggan`, `email`, `telepon`, `alamat`, `kode_transaksi`, `tanggal_transaksi`, `jumlah_transaksi`, `status_bayar`, `jumlah_bayar`, `rekening_pembayaran`, `rekening_pelanggan`, `bukti_bayar`, `id_rekening`, `tanggal_bayar`, `nama_bank`, `tanggal_post`, `tanggal_update`) VALUES
@@ -81,12 +137,13 @@ INSERT INTO `header_transaksi` (`id_header_transaksi`, `id_pelanggan`, `nama_pel
 (66, 15, 'Pelanggan', 'Pelanggan@gmail.com', '62345678890', 'Bandung', 'Y4LV2C', '2023-07-10 00:00:00', 30000, 'Konfirmasi', 30000, '2345678', 'Pelanggan', 'bukti4.jpg', 5, '10-07-2023', 'BANK BRI', '2023-07-10 05:15:07', '2023-07-10 03:15:07'),
 (67, 15, 'Pelanggan', 'Pelanggan@gmail.com', '62345678890', 'Jakarta', 'I4DUMK', '2023-07-20 00:00:00', 41000, 'Konfirmasi', 41000, '2345678', 'Pelanggan2', 'bukti5.jpg', 5, '20-07-2023', 'BANK BRI', '2023-07-20 05:17:41', '2023-07-20 03:17:41'),
 (68, 15, 'Pelanggan', 'Pelanggan@gmail.com', '62345678890', 'Jakarta', 'YZTGBM', '2023-07-20 00:00:00', 8000, 'Konfirmasi', 8000, '2345678', 'Pelanggan', 'bukti6.jpg', 5, '20-07-2023', 'BANK BSI', '2023-07-20 06:03:09', '2023-07-20 04:03:09'),
-(69, 15, 'Pelanggan', 'Pelanggan@gmail.com', '62345678890', 'Jakarta', 'M2OV5Z', '2023-07-20 00:00:00', 10000, 'Konfirmasi', 10000, '2345678', 'Putri', 'bukti8.jpg', 5, '20-07-2023', 'BANK BRI', '2023-07-20 06:18:37', '2023-07-20 04:18:37');
+(69, 15, 'Pelanggan', 'Pelanggan@gmail.com', '62345678890', 'Jakarta', 'M2OV5Z', '2023-07-20 00:00:00', 10000, 'Konfirmasi', 10000, '2345678', 'Putri', 'bukti8.jpg', 5, '20-07-2023', 'BANK BRI', '2023-07-20 06:18:37', '2023-07-20 04:18:37'),
+(0, 17, 'Azar Nuzy', 'azarnuzy@gmail.com', '6282246449106', 'Bandung', 'STILJU', '2023-09-30 00:00:00', 20000, 'Konfirmasi', 20000, '1234567', 'Daffa', 'ktp.jpeg', 5, '30-09-2023', 'Bank Mandiri', '2023-09-30 08:10:52', '2023-09-30 06:10:52');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -95,11 +152,11 @@ CREATE TABLE `kategori` (
   `nama_kategori` varchar(50) NOT NULL,
   `urutan` int(3) DEFAULT NULL,
   `gambar` varchar(255) NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `slug_kategori`, `nama_kategori`, `urutan`, `gambar`, `tanggal_update`) VALUES
@@ -110,7 +167,7 @@ INSERT INTO `kategori` (`id_kategori`, `slug_kategori`, `nama_kategori`, `urutan
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `konfigurasi`
+-- Table structure for table `konfigurasi`
 --
 
 CREATE TABLE `konfigurasi` (
@@ -120,33 +177,33 @@ CREATE TABLE `konfigurasi` (
   `tagline` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `website` varchar(50) DEFAULT NULL,
-  `keywords` text DEFAULT NULL,
-  `metatext` text DEFAULT NULL,
+  `keywords` text,
+  `metatext` text,
   `telepon` varchar(20) DEFAULT NULL,
   `alamat` varchar(300) DEFAULT NULL,
   `facebook` varchar(50) DEFAULT NULL,
   `instagram` varchar(50) DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL,
+  `deskripsi` text,
   `logo` varchar(255) DEFAULT NULL,
   `icon` varchar(255) DEFAULT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `konfigurasi`
+-- Dumping data for table `konfigurasi`
 --
 
 INSERT INTO `konfigurasi` (`id_konfigurasi`, `id_user`, `namaweb`, `tagline`, `email`, `website`, `keywords`, `metatext`, `telepon`, `alamat`, `facebook`, `instagram`, `deskripsi`, `logo`, `icon`, `tanggal_update`) VALUES
-(1, 14, 'Cigifarm.id', 'Grosir, supplier & eksportir buah  dan sayuran.', 'cigifarmjl@gmail.com', 'http://cigifarmgroup.com', 'buah, sayur, supplier. ', NULL, '6281214369502', 'Desa girimukti Kecamatan Kasokandel Kabupaten Majalengka', 'https://web.facebook.com/search/top?q=cigifarm', 'https://www.instagram.com/cigifarmgroup/', 'Membantu para petani buah dan sayuran untuk mengembangkan hasil\r\npanennya dan proses penjualannya', 'logo22.png', 'HD-removebg-preview5.png', '2020-08-07 13:17:56');
+(1, 14, 'Cigifarm.id', 'Grosir, supplier & eksportir buah  dan sayuran.', 'cigifarmjl@gmail.com', 'http://cigifarmgroup.com', 'buah, sayur, supplier', NULL, '6281214369502', 'Desa girimukti Kecamatan Kasokandel Kabupaten Majalengka', 'https://web.facebook.com/search/top?q=cigifarm', 'https://www.instagram.com/cigifarmgroup/', 'Membantu para petani buah dan sayuran untuk mengembangkan hasil\r\npanennya dan proses penjualannya', 'logo22.png', 'HD-removebg-preview5.png', '2020-08-07 13:17:56');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pelanggan`
+-- Table structure for table `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
-  `id_pelanggan` int(3) NOT NULL,
+  `id_pelanggan` int(11) UNSIGNED NOT NULL,
   `status_pelanggan` varchar(20) NOT NULL,
   `nama_pelanggan` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -154,21 +211,22 @@ CREATE TABLE `pelanggan` (
   `telepon` varchar(20) DEFAULT NULL,
   `alamat` varchar(300) DEFAULT NULL,
   `tanggal_daftar` datetime NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pelanggan`
+-- Dumping data for table `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `status_pelanggan`, `nama_pelanggan`, `email`, `password`, `telepon`, `alamat`, `tanggal_daftar`, `tanggal_update`) VALUES
 (15, 'Pending', 'Pelanggan', 'Pelanggan@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '62345678890', 'Jakarta', '2023-05-07 22:25:42', '2023-05-07 20:25:42'),
-(16, 'Pending', 'Pelanggann', 'pelanggan2@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '625362728289', 'Bali', '2023-05-24 10:11:22', '2023-05-24 08:11:22');
+(16, 'Pending', 'Pelanggann', 'pelanggan2@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '625362728289', 'Bali', '2023-05-24 10:11:22', '2023-05-24 08:11:22'),
+(17, 'Pending', 'Azar Nuzy', 'azarnuzy@gmail.com', 'b5df4ba6142458412002ef31828812e9939bcd59', '6282246449106', 'Bandung', '2023-09-30 08:10:20', '2023-09-30 06:10:20');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 CREATE TABLE `produk` (
@@ -179,18 +237,18 @@ CREATE TABLE `produk` (
   `nama_produk` varchar(50) NOT NULL,
   `slug_produk` varchar(255) NOT NULL,
   `keterangan` text NOT NULL,
-  `keywords` text DEFAULT NULL,
+  `keywords` text,
   `harga` int(11) NOT NULL,
   `stok` int(3) DEFAULT NULL,
   `gambar` varchar(255) NOT NULL,
   `ukuran` varchar(20) DEFAULT NULL,
   `status_produk` varchar(20) NOT NULL,
   `tanggal_post` datetime NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `id_user`, `id_kategori`, `kode_produk`, `nama_produk`, `slug_produk`, `keterangan`, `keywords`, `harga`, `stok`, `gambar`, `ukuran`, `status_produk`, `tanggal_post`, `tanggal_update`) VALUES
@@ -217,12 +275,26 @@ INSERT INTO `produk` (`id_produk`, `id_user`, `id_kategori`, `kode_produk`, `nam
 (61, 14, 9, 'mangga-cengkir3', 'Mangga Cengkir Dermayu', 'mangga-cengkir-dermayu-mangga-cengkir3', '', '', 12000, 92, 'DermayuCengkir5.png', 'kg', 'Publish', '2023-05-07 23:55:41', '2023-05-07 21:55:41'),
 (62, 14, 9, 'mangga-gincu3', 'Mangga Gincu', 'mangga-gincu-mangga-gincu3', '', '', 30000, 93, 'Mangga_Gincu12.png', 'kg', 'Publish', '2023-05-07 23:56:28', '2023-05-07 21:56:28'),
 (63, 14, 9, 'mangga-gedong3', 'Mangga Gedong', 'mangga-gedong-mangga-gedong3', '', '', 25000, 96, 'mangga_gedong3.png', 'kg', 'Publish', '2023-05-07 23:57:14', '2023-05-07 21:57:14'),
-(65, 14, 9, 'mangga-harumanis3', 'Mangga Harumanis', 'mangga-harumanis-mangga-harumanis3', '', '', 20000, 96, 'mangga_Harum_Manis3.png', 'kg', 'Publish', '2023-05-08 00:45:09', '2023-05-07 22:45:09');
+(65, 14, 9, 'mangga-harumanis3', 'Mangga Harumanis', 'mangga-harumanis-mangga-harumanis3', '', '', 20000, 95, 'mangga_Harum_Manis3.png', 'kg', 'Publish', '2023-05-08 00:45:09', '2023-05-07 22:45:09');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rekening`
+-- Table structure for table `registrasi`
+--
+
+CREATE TABLE `registrasi` (
+  `id_registrasi` int(10) UNSIGNED NOT NULL,
+  `kode_registrasi` varchar(20) NOT NULL,
+  `id_event` int(10) UNSIGNED NOT NULL,
+  `id_pelanggan` int(11) UNSIGNED NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekening`
 --
 
 CREATE TABLE `rekening` (
@@ -232,11 +304,11 @@ CREATE TABLE `rekening` (
   `nomor_rekening` varchar(30) NOT NULL,
   `nama_pemilik` varchar(50) NOT NULL,
   `gambar` varchar(255) DEFAULT NULL,
-  `tanggal_post` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_post` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `rekening`
+-- Dumping data for table `rekening`
 --
 
 INSERT INTO `rekening` (`id_rekening`, `id_user`, `nama_bank`, `nomor_rekening`, `nama_pemilik`, `gambar`, `tanggal_post`) VALUES
@@ -247,7 +319,7 @@ INSERT INTO `rekening` (`id_rekening`, `id_user`, `nama_bank`, `nomor_rekening`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaksi`
+-- Table structure for table `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -259,11 +331,11 @@ CREATE TABLE `transaksi` (
   `jumlah` int(3) NOT NULL,
   `total_harga` int(11) NOT NULL,
   `tanggal_transaksi` datetime NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `transaksi`
+-- Dumping data for table `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `kode_transaksi`, `id_produk`, `harga`, `jumlah`, `total_harga`, `tanggal_transaksi`, `tanggal_update`) VALUES
@@ -284,10 +356,11 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `kode_transaksi`, `id_p
 (91, 15, 'I4DUMK', 58, 8000, 2, 16000, '2023-07-20 00:00:00', '2023-07-20 03:17:41'),
 (92, 15, 'I4DUMK', 63, 25000, 1, 25000, '2023-07-20 00:00:00', '2023-07-20 03:17:41'),
 (93, 15, 'YZTGBM', 57, 8000, 1, 8000, '2023-07-20 00:00:00', '2023-07-20 04:03:09'),
-(94, 15, 'M2OV5Z', 59, 10000, 1, 10000, '2023-07-20 00:00:00', '2023-07-20 04:18:37');
+(94, 15, 'M2OV5Z', 59, 10000, 1, 10000, '2023-07-20 00:00:00', '2023-07-20 04:18:37'),
+(95, 17, 'STILJU', 65, 20000, 1, 20000, '2023-09-30 00:00:00', '2023-09-30 06:10:52');
 
 --
--- Trigger `transaksi`
+-- Triggers `transaksi`
 --
 DELIMITER $$
 CREATE TRIGGER `pesanan_penjualan` AFTER INSERT ON `transaksi` FOR EACH ROW BEGIN
@@ -300,7 +373,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -310,11 +383,11 @@ CREATE TABLE `users` (
   `username` varchar(32) NOT NULL,
   `password` varchar(64) NOT NULL,
   `akses_level` varchar(20) NOT NULL,
-  `tanggal_update` timestamp NOT NULL DEFAULT current_timestamp()
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_level`, `tanggal_update`) VALUES
@@ -326,43 +399,52 @@ INSERT INTO `users` (`id_user`, `nama`, `email`, `username`, `password`, `akses_
 --
 
 --
--- Indeks untuk tabel `gambar`
+-- Indexes for table `acara`
+--
+ALTER TABLE `acara`
+  ADD PRIMARY KEY (`id_acara`);
+
+--
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD PRIMARY KEY (`id_event`);
+
+--
+-- Indexes for table `gambar`
 --
 ALTER TABLE `gambar`
   ADD PRIMARY KEY (`id_gambar`),
   ADD KEY `id_produk` (`id_produk`);
 
 --
--- Indeks untuk tabel `header_transaksi`
+-- Indexes for table `header_transaksi`
 --
 ALTER TABLE `header_transaksi`
-  ADD PRIMARY KEY (`id_header_transaksi`),
-  ADD UNIQUE KEY `kode_transaksi` (`kode_transaksi`),
-  ADD KEY `id_pelanggan` (`id_pelanggan`),
-  ADD KEY `id_rekening` (`id_rekening`);
+  ADD KEY `header_transaksi_ibfk_4` (`id_rekening`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `konfigurasi`
+-- Indexes for table `konfigurasi`
 --
 ALTER TABLE `konfigurasi`
   ADD PRIMARY KEY (`id_konfigurasi`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indeks untuk tabel `pelanggan`
+-- Indexes for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`id_pelanggan`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indeks untuk tabel `produk`
+-- Indexes for table `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`),
@@ -371,7 +453,14 @@ ALTER TABLE `produk`
   ADD KEY `id_kategori` (`id_kategori`);
 
 --
--- Indeks untuk tabel `rekening`
+-- Indexes for table `registrasi`
+--
+ALTER TABLE `registrasi`
+  ADD PRIMARY KEY (`id_registrasi`),
+  ADD UNIQUE KEY `unq_registrasi.kode_registrasi` (`kode_registrasi`);
+
+--
+-- Indexes for table `rekening`
 --
 ALTER TABLE `rekening`
   ADD PRIMARY KEY (`id_rekening`),
@@ -379,108 +468,112 @@ ALTER TABLE `rekening`
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indeks untuk tabel `transaksi`
+-- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
   ADD KEY `id_pelanggan` (`id_pelanggan`),
   ADD KEY `id_produk` (`id_produk`),
-  ADD KEY `kode_transaksi` (`kode_transaksi`);
+  ADD KEY `kode_transaksi` (`kode_transaksi`(191));
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `gambar`
+-- AUTO_INCREMENT for table `acara`
+--
+ALTER TABLE `acara`
+  MODIFY `id_acara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id_event` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gambar`
 --
 ALTER TABLE `gambar`
-  MODIFY `id_gambar` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_gambar` int(3) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `header_transaksi`
---
-ALTER TABLE `header_transaksi`
-  MODIFY `id_header_transaksi` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
-
---
--- AUTO_INCREMENT untuk tabel `kategori`
+-- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_kategori` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `konfigurasi`
+-- AUTO_INCREMENT for table `konfigurasi`
 --
 ALTER TABLE `konfigurasi`
   MODIFY `id_konfigurasi` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `pelanggan`
+-- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_pelanggan` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `produk`
+-- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id_produk` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
--- AUTO_INCREMENT untuk tabel `rekening`
+-- AUTO_INCREMENT for table `registrasi`
+--
+ALTER TABLE `registrasi`
+  MODIFY `id_registrasi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `rekening`
 --
 ALTER TABLE `rekening`
-  MODIFY `id_rekening` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_rekening` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `transaksi`
+-- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id_transaksi` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `gambar`
+-- Constraints for table `gambar`
 --
 ALTER TABLE `gambar`
   ADD CONSTRAINT `gambar_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
--- Ketidakleluasaan untuk tabel `header_transaksi`
+-- Constraints for table `header_transaksi`
 --
 ALTER TABLE `header_transaksi`
   ADD CONSTRAINT `header_transaksi_ibfk_4` FOREIGN KEY (`id_rekening`) REFERENCES `rekening` (`id_rekening`) ON DELETE SET NULL ON UPDATE SET NULL;
 
 --
--- Ketidakleluasaan untuk tabel `produk`
+-- Constraints for table `produk`
 --
 ALTER TABLE `produk`
   ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ketidakleluasaan untuk tabel `transaksi`
---
-ALTER TABLE `transaksi`
-  ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `transaksi_ibfk_3` FOREIGN KEY (`kode_transaksi`) REFERENCES `header_transaksi` (`kode_transaksi`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
